@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ejercicio2Controller;
+use App\Http\Controllers\ejercicio3Controller;
 use App\Http\Controllers\Practica1Controller;
 use App\Http\Controllers\practica2Controller;
 use Illuminate\Support\Facades\Route;
@@ -30,3 +32,11 @@ Route::get('/practica2', [practica2Controller::class, 'practica2'])
 
 Route::POST('resultado_pr2',[practica2Controller::class, 'resultado_pr2'])
 ->name('resultado_pr2');
+
+Route::get('/ejercicio2', [ejercicio2Controller::class, 'verformulario'])
+->name('ejercicio2');
+
+Route::get('/ejercicio3',[ejercicio3Controller::class, 'verformulario'])
+->name('ejercicio3');
+Route::POST('resultadoejercicio3',[ejercicio3Controller::class, 'resultadoejercicio3'])
+->name('resultadoejercicio3');
